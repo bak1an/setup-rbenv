@@ -7,6 +7,10 @@ on:
       - master
       - 'releases/*'
 
+defaults:
+  run:
+    shell: bash -l {0}
+
 jobs:
   test:
     runs-on: ubuntu-16.04
@@ -18,8 +22,7 @@ jobs:
     - run: npm test
     - uses: ./
     - run: |
-        eval "$(rbenv init -)"
         rbenv install 2.5.7
         rbenv install 2.6.5
         rbenv install 2.7.0
-    
+

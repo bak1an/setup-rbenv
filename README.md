@@ -1,6 +1,6 @@
 ***DO NOT USE THIS ACTION***
 
-[ruby/setup-ruby](https://github.com/ruby/setup-ruby) provides everything that this action has provided. 
+[ruby/setup-ruby](https://github.com/ruby/setup-ruby) provides everything that this action has provided.
 
 # setup-rbenv
 
@@ -8,7 +8,7 @@ Setup Ruby by [rbenv](https://github.com/rbenv/rbenv) on Ubuntu 18.04 / 16.04 vi
 
 # Usage
 
-You need to initialize rbenv by dispatching `eval "$(rbenv init -)"` in each step before you run Ruby.
+You need to initialize rbenv by dispatching `eval "$(rbenv init -)"` in each step before you run Ruby or use `shell: bash -l {0}` to run the commands.
 
 ```yaml
 steps:

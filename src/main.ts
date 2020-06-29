@@ -1,5 +1,6 @@
 import * as core from '@actions/core';
 import * as installer from './installer';
+import * as fs from 'fs'
 
 async function run() {
   try {
@@ -29,6 +30,8 @@ async function run() {
 
     core.exportVariable('RBENV_ROOT', options.rbenvRoot);
     core.addPath(`${options.rbenvRoot}/bin`);
+
+    fs.appendFileSync("/home/runner/.bash_profile", "\neval \"$(rbenv init -)\"\n")
   } catch (error) {
     core.setFailed(error.message);
   }
