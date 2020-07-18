@@ -22,6 +22,8 @@ jobs:
     - run: npm test
     - uses: ./
     - run: |
+        rbenv install 2.3.8
+        rbenv install 2.4.9
         rbenv install 2.5.7
         rbenv install 2.6.5
         rbenv install 2.7.0
